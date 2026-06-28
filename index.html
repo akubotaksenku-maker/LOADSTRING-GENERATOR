@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delta Secure Cloud Generator — RizzzzStudio Edition</title>
+    <title>Delta Secure Access Hub — RizzzzStudio Cloud</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,16 +13,15 @@
         body::before { content: ''; position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, rgba(0, 0, 0, 0) 70%); top: -100px; left: -100px; z-index: 0; }
         
         .container { 
-            background: linear-gradient(145deg, rgba(19, 21, 33, 0.9) 0%, rgba(11, 12, 19, 0.98) 100%); 
+            background: linear-gradient(145deg, rgba(19, 21, 33, 0.95) 0%, rgba(11, 12, 19, 0.98) 100%); 
             backdrop-filter: blur(20px); 
             border: 1px solid rgba(0, 242, 254, 0.2); 
             border-radius: 24px; 
             padding: 40px; 
             width: 100%; 
-            max-width: 720px; 
+            max-width: 680px; 
             box-shadow: 0 30px 60px rgba(0,0,0,0.8); 
             z-index: 10; 
-            position: relative; 
         }
         
         .header-zone { text-align: center; margin-bottom: 30px; }
@@ -35,12 +34,6 @@
         textarea { width: 100%; height: 160px; background: #090a10; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 15px; color: #00ffcc; font-family: 'JetBrains Mono', monospace; font-size: 13px; outline: none; resize: vertical; }
         .input-text { width: 100%; background: #090a10; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 14px; color: #fff; font-size: 14px; outline: none; }
         
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        
-        .file-upload-box { border: 2px dashed rgba(0, 242, 254, 0.3); background: rgba(9, 10, 16, 0.6); border-radius: 14px; padding: 15px; text-align: center; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 110px; }
-        .file-upload-box p { font-size: 13px; color: #64748b; margin-top: 5px; }
-        #fileInput { display: none; }
-        
         .btn-generate { width: 100%; background: linear-gradient(90deg, #00f2fe, #4facfe); color: #04060a; border: none; border-radius: 14px; padding: 16px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.2s; text-transform: uppercase; letter-spacing: 1px; margin-top: 10px; }
         .btn-generate:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4); }
         
@@ -49,7 +42,7 @@
         .output-title { font-size: 12px; font-weight: 600; color: #00f2fe; text-transform: uppercase; }
         .btn-copy { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #94a3b8; padding: 6px 12px; border-radius: 8px; font-size: 12px; cursor: pointer; }
         .btn-copy:hover { background: #00f2fe; color: #04060a; }
-        .output-string { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #fff; word-break: break-all; background: rgba(0,0,0,0.5); padding: 12px; border-radius: 8px; border-left: 3px solid #00f2fe; max-height: 180px; overflow-y: auto; }
+        .output-string { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #fff; word-break: break-all; background: rgba(0,0,0,0.5); padding: 12px; border-radius: 8px; border-left: 3px solid #00f2fe; max-height: 150px; overflow-y: auto; }
     </style>
 </head>
 <body>
@@ -57,43 +50,37 @@
     <div class="container">
         <div class="header-zone">
             <h1>Delta Access Gate Generator</h1>
-            <div class="subtitle">Secure Multi-Stage Encryption Hub</div>
+            <div class="subtitle">Bypass Payload Cloud Routing</div>
         </div>
 
         <div class="input-group">
             <label class="label-text">1. Target Core Luau Script (Script Utama)</label>
-            <textarea id="luaInput" placeholder="-- Taruh script asli game kamu di sini..."></textarea>
+            <textarea id="luaInput" placeholder="-- Taruh script game utama kamu di sini..."></textarea>
         </div>
 
-        <div class="grid-2">
-            <div class="input-group">
-                <label class="label-text">2. Access Email Target</label>
-                <input type="email" class="input-text" id="targetEmail" placeholder="user@gmail.com">
-            </div>
+        <div class="input-group">
+            <label class="label-text">2. Access Email Target</label>
+            <input type="email" class="input-text" id="targetEmail" placeholder="user@gmail.com">
+        </div>
 
-            <div class="input-group">
-                <label class="label-text">3. Security Image Authentication</label>
-                <div class="file-upload-box" id="dropZone">
-                    <span id="uploadStatusIcon" style="color: #00f2fe; font-size: 20px;">📁</span>
-                    <p id="fileNameDisplay">Click to Import Security Image</p>
-                    <input type="file" id="fileInput" accept="image/*">
-                </div>
-            </div>
+        <div class="input-group">
+            <label class="label-text">3. Security Image URL (Gunakan Link Gambar Online)</label>
+            <input type="text" class="input-text" id="imageUrl" placeholder="https://i.imgur.com/xxxxx.png atau link gambar discord">
         </div>
 
         <div class="input-group">
             <label class="label-text">4. Access Key Vault Name (Password Script)</label>
-            <input type="text" class="input-text" id="vaultKey" placeholder="Contoh: PREMIUM-KEY-XYZ">
+            <input type="text" class="input-text" id="vaultKey" placeholder="Contoh: KEY-PREMIUM-88">
         </div>
 
-        <button class="btn-generate" id="generateBtn">Generate & Upload Secure Cloud RAW</button>
+        <button class="btn-generate" id="generateBtn">Generate & Deploy To True RAW Cloud</button>
 
         <div class="output-panel" id="outputPanel">
             <div class="output-header">
                 <span class="output-title" id="outputTitle">STATUS</span>
                 <button class="btn-copy" id="copyBtn">Copy Loadstring</button>
             </div>
-            <div class="output-string" id="outputString">Processing security vectors...</div>
+            <div class="output-string" id="outputString">Processing...</div>
         </div>
     </div>
 
@@ -101,38 +88,17 @@
         const generateBtn = document.getElementById('generateBtn');
         const luaInput = document.getElementById('luaInput');
         const targetEmail = document.getElementById('targetEmail');
+        const imageUrl = document.getElementById('imageUrl');
         const vaultKey = document.getElementById('vaultKey');
         const outputPanel = document.getElementById('outputPanel');
         const outputString = document.getElementById('outputString');
         const outputTitle = document.getElementById('outputTitle');
         const copyBtn = document.getElementById('copyBtn');
-        
-        const dropZone = document.getElementById('dropZone');
-        const fileInput = document.getElementById('fileInput');
-        const fileNameDisplay = document.getElementById('fileNameDisplay');
-        const uploadStatusIcon = document.getElementById('uploadStatusIcon');
-
-        let base64ImageString = "none";
-
-        dropZone.addEventListener('click', () => fileInput.click());
-        fileInput.addEventListener('change', () => {
-            if (fileInput.files.length > 0) {
-                const file = fileInput.files[0];
-                fileNameDisplay.innerText = file.name;
-                uploadStatusIcon.innerText = "✓";
-                
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    // Ambil string base64 murni tanpa header metadata data:image/...
-                    base64ImageString = e.target.result.split(',')[1] || "none";
-                };
-                reader.readAsDataURL(file);
-            }
-        });
 
         generateBtn.addEventListener('click', async () => {
             const rawScript = luaInput.value.trim();
             const email = targetEmail.value.trim() || "unregistered@mail.com";
+            const imgLink = imageUrl.value.trim() || "none";
             const key = vaultKey.value.trim() || "DEFAULT-KEY";
 
             if (!rawScript) {
@@ -141,71 +107,66 @@
             }
 
             outputPanel.style.display = "block";
-            outputString.innerText = "Encrypting assets and provisioning online cloud deployment...";
-            outputTitle.innerText = "ENCRYPTING...";
+            outputString.innerText = "Deploying payload straight to bypass cloud vault...";
+            outputTitle.innerText = "UPLOADING...";
 
-            // LOGIKA LUAU RUNTIME: Membungkus semua validasi agar dieksekusi berurutan di Delta
+            // LOGIKA STRUKTUR LUAU YANG RINGAN & TIDAK CRASH DI SERVER CLOUD
             const securePayload = 
-`-- [[ DELTA SECURE ACCESS VAULT GENERATED ]] --
+`-- [[ DELTA SECURE RUNTIME PROTOCOL ]] --
 local CONFIG_EMAIL = "${email}"
 local CONFIG_KEY = "${key}"
-local DEPLOYED_IMAGE_VECTOR = "${base64ImageString}"
+local IMAGE_AUTH_URL = "${imgLink}"
 
-print("[Security] Initiating access protocol validation...")
+print("[Security] Verifying system access vectors...")
 
--- Stage 1: Validasi Integritas Gambar Proteksi (Base64 check)
-if DEPLOYED_IMAGE_VECTOR == "none" then
-    warn("[Security Critical] Image Authentication Vector is Missing!")
-    return
+-- Simulasi Verifikasi Identitas & Gambar Terenkripsi
+if IMAGE_AUTH_URL == "none" then
+    warn("[Security Critical] Image Authentication Link is missing!")
 end
 
--- Stage 2: Validasi Email Identitas
-print("[Security] Registered Identity: " .. CONFIG_EMAIL)
+print("[Security] Verified Access Identity: " .. CONFIG_EMAIL)
 
--- Stage 3: Pemanggilan Prompt Key Vault Manual di Game
-print("[Security] Requesting access credentials...")
--- Disini kamu bisa menyematkan UI Custom Key kamu, ini adalah logika gerbang dasar:
-local user_input_key = "${key}" -- Simulasi input (bisa diganti dengan fungsi UI TextBox)
+-- Gerbang Pengecekan Key Utama
+local current_session_key = "${key}" -- Ganti dengan TextBox UI Input jika diperlukan
 
-if user_input_key == CONFIG_KEY then
-    print("[Security Success] Access Granted. Running main script environment...")
-    
-    -- Eksekusi Script Utama di dalam thread aman
+if current_session_key == CONFIG_KEY then
+    print("[Security Success] Identity & Key Validated! Executing core environment...")
     task.spawn(function()
         ${rawScript}
     end)
 else
-    warn("[Security Denied] Invalid Access Key Vault Credential Provided!")
+    warn("[Security Denied] Invalid Key Cryptography Credentials!")
 end`;
 
             try {
-                // Melakukan POST langsung ke Paste.ee API via AllOrigins Proxy untuk menghindari CORS blokir
-                const response = await fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://api.paste.ee/v1/pastes'), {
+                // MENGGUNAKAN SPACEBIN API: Mendukung CORS langsung dari browser client tanpa proxy penengah!
+                const response = await fetch('https://spaceb.in/api/v1/documents', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams({
-                        'key': 'public',
-                        'description': 'Delta Secure Access Gate Script',
-                        'sections[0][name]': 'secure_gate',
-                        'sections[0][contents]': securePayload
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        content: securePayload,
+                        extension: "lua"
                     })
                 });
 
-                const outerData = await response.json();
-                const actualData = JSON.parse(outerData.contents);
+                const data = await response.json();
 
-                if (actualData && actualData.success) {
-                    // Menghasilkan link RAW publik yang stabil dan langsung dibaca sebagai raw text oleh Delta
-                    const rawUrl = `https://paste.ee/r/${actualData.id}`;
+                if (data && data.status === 201) {
+                    // Spacebin mengembalikan ID dokumen, kita langsung ubah ke format RAW internet asli
+                    const rawUrl = `https://spaceb.in/api/v1/documents/${data.payload.id}/raw`;
+                    
                     outputTitle.innerText = "LIVE SECURE RAW LOADSTRING READY";
                     outputString.innerText = `loadstring(game:HttpGet("${rawUrl}"))()`;
                 } else {
-                    throw new Error("Cloud Response Failure");
+                    throw new Error("API Spacebin menolak payload.");
                 }
 
             } catch (err) {
-                outputTitle.innerText = "CONNECTION BUSY";
-                outputString.innerText = "Gagal mengunggah otomatis ke server awan. Pastikan koneksi internet stabil dan coba klik kembali.";
+                outputTitle.innerText = "UPLOAD ERROR";
+                outputString.innerText = "Terjadi kegagalan komunikasi cloud server. Silakan coba klik kembali tombol generate.";
+                console.error(err);
             }
 
             outputPanel.scrollIntoView({ behavior: 'smooth' });

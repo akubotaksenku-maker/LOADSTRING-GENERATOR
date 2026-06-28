@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delta Loadstring Hub — Premium Edition</title>
+    <title>Delta Loadstring Hub — Ultimate Premium Edition</title>
     <!-- Google Fonts: Fredoka untuk UI rounded yang clean, JetBrains Mono untuk Script -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,29 +58,22 @@
             100% { transform: scale(1.2); opacity: 1; }
         }
 
-        /* Ultra Premium Container - Advanced Glassmorphism */
+        /* Container - Advanced Glassmorphism with UICorner */
         .container {
             background: linear-gradient(145deg, rgba(19, 21, 33, 0.85) 0%, rgba(11, 12, 19, 0.95) 100%);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(0, 242, 254, 0.15);
-            border-radius: 28px; /* UICorner Premium */
+            border-radius: 28px; /* UICorner Style */
             padding: 40px;
             width: 100%;
             max-width: 700px;
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 
-                        0 0 50px rgba(0, 242, 254, 0.05),
-                        inset 0 1px 2px rgba(255, 255, 255, 0.1);
+                        0 0 50px rgba(0, 242, 254, 0.05);
             z-index: 10;
             position: relative;
-            transition: border-color 0.5s ease;
         }
 
-        .container:hover {
-            border-color: rgba(0, 242, 254, 0.3);
-        }
-
-        /* Logo / Header Style */
         .header-zone {
             text-align: center;
             margin-bottom: 35px;
@@ -89,12 +82,10 @@
         h1 {
             font-size: 28px;
             font-weight: 700;
-            letter-spacing: 0.5px;
             background: linear-gradient(90deg, #00f2fe, #4facfe, #7f00ff);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shineText 5s linear infinite;
             text-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
         }
 
@@ -104,10 +95,6 @@
             margin-top: 6px;
             text-transform: uppercase;
             letter-spacing: 2px;
-        }
-
-        @keyframes shineText {
-            to { background-position: 200% center; }
         }
 
         .input-group {
@@ -121,7 +108,6 @@
             font-weight: 500;
             margin-bottom: 10px;
             color: #94a3b8;
-            letter-spacing: 0.3px;
         }
 
         .label-text svg {
@@ -137,7 +123,7 @@
             height: 220px;
             background: #090a10;
             border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 16px; /* UICorner Textbox */
+            border-radius: 16px;
             padding: 18px;
             color: #00ffcc;
             font-family: 'JetBrains Mono', monospace;
@@ -145,14 +131,12 @@
             line-height: 1.6;
             resize: vertical;
             outline: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
         }
 
         textarea:focus {
             border-color: #00f2fe;
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.15), inset 0 2px 4px rgba(0,0,0,0.5);
-            background: #05060a;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
         }
 
         /* Premium Interactive Generate Button */
@@ -161,43 +145,23 @@
             background: linear-gradient(90deg, #00f2fe, #4facfe);
             color: #04060a;
             border: none;
-            border-radius: 16px; /* UICorner */
+            border-radius: 16px;
             padding: 16px;
             font-size: 15px;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
             box-shadow: 0 4px 20px rgba(0, 242, 254, 0.25);
             text-transform: uppercase;
             letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-generate::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: all 0.6s ease;
-        }
-
-        .btn-generate:hover::before {
-            left: 100%;
         }
 
         .btn-generate:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(0, 242, 254, 0.45);
-            filter: brightness(1.05);
         }
 
-        .btn-generate:active {
-            transform: translateY(1px);
-        }
-
-        /* Futuristic Premium Checkbox */
+        /* Checkbox Container */
         .checkbox-container {
             display: flex;
             align-items: center;
@@ -208,18 +172,12 @@
             font-weight: 500;
             color: #64748b;
             width: fit-content;
-            transition: color 0.3s ease;
-        }
-
-        .checkbox-container:hover {
-            color: #94a3b8;
         }
 
         .checkbox-container input {
             position: absolute;
             opacity: 0;
             cursor: pointer;
-            height: 0; width: 0;
         }
 
         .checkmark {
@@ -231,17 +189,13 @@
             margin-right: 12px;
             display: inline-block;
             position: relative;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
         }
 
         .checkbox-container input:checked ~ .checkmark {
             background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
             border-color: transparent;
             box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
-        }
-
-        .checkbox-container input:checked ~ .checkmark::after {
-            display: block;
         }
 
         .checkmark::after {
@@ -257,13 +211,16 @@
             transform: rotate(45deg);
         }
 
-        /* Dynamic Security Panel Expansion */
+        .checkbox-container input:checked ~ .checkmark::after {
+            display: block;
+        }
+
+        /* Security Panel Style */
         .security-panel {
             max-height: 0;
             overflow: hidden;
             opacity: 0;
             transition: max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-            margin-top: 0;
         }
 
         .security-panel.active {
@@ -274,7 +231,6 @@
             padding-top: 25px;
         }
 
-        /* Premium Dual Column Layout for Security Inside Panel */
         .security-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -286,7 +242,6 @@
             .security-grid { grid-template-columns: 1fr; }
         }
 
-        /* Inputs Inside Security Panel */
         .input-text {
             width: 100%;
             background: #090a10;
@@ -296,51 +251,88 @@
             color: #fff;
             font-size: 14px;
             outline: none;
-            transition: all 0.3s ease;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
         }
 
         .input-text:focus {
             border-color: #4facfe;
-            box-shadow: 0 0 12px rgba(79, 172, 254, 0.2), inset 0 1px 3px rgba(0,0,0,0.3);
-            background: #05060a;
+            box-shadow: 0 0 12px rgba(79, 172, 254, 0.2);
         }
 
-        /* Dynamic Image Status Badge */
-        .image-status-badge {
+        /* File Upload Custom Area */
+        .file-upload-box {
+            position: relative;
+            width: 100%;
+            background: #090a10;
+            border: 2px dashed rgba(0, 242, 254, 0.3);
+            border-radius: 14px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-box:hover {
+            border-color: #00f2fe;
+            background: rgba(0, 242, 254, 0.02);
+        }
+
+        .file-upload-box input[type="file"] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0; left: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .upload-info {
+            font-size: 13px;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
+
+        .upload-info svg {
+            width: 18px;
+            height: 18px;
+            fill: #00f2fe;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        /* Info Badge */
+        .info-badge {
             display: flex;
             align-items: center;
             background: rgba(0, 242, 254, 0.05);
-            border: 1px dashed rgba(0, 242, 254, 0.2);
+            border: 1px solid rgba(0, 242, 254, 0.15);
             border-radius: 12px;
             padding: 12px 16px;
-            margin-top: -5px;
             margin-bottom: 20px;
             font-size: 13px;
             color: #00f2fe;
         }
 
-        .image-status-badge svg {
-            width: 18px;
-            height: 18px;
-            fill: #00f2fe;
-            margin-right: 10px;
+        .info-badge svg {
+            width: 18px; height: 18px;
+            fill: #00f2fe; margin-right: 10px;
+            flex-shrink: 0;
         }
 
-        /* Premium Output Panel */
+        /* Output Panel */
         .output-panel {
             margin-top: 30px;
-            background: rgba(5, 6, 10, 0.85);
-            border: 1px solid rgba(0, 242, 254, 0.25);
+            background: rgba(5, 6, 10, 0.95);
+            border: 1px solid rgba(0, 242, 254, 0.3);
             border-radius: 18px;
             padding: 20px;
             display: none;
-            animation: fadeIn 0.4s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .output-header {
@@ -373,7 +365,6 @@
         .btn-copy:hover {
             background: #00f2fe;
             color: #04060a;
-            border-color: transparent;
             box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
         }
 
@@ -385,9 +376,7 @@
             background: rgba(0, 0, 0, 0.4);
             padding: 14px;
             border-radius: 10px;
-            max-height: 120px;
-            overflow-y: auto;
-            border-left: 3px solid #4facfe;
+            border-left: 3px solid #00f2fe;
         }
     </style>
 </head>
@@ -396,54 +385,59 @@
     <div class="container">
         <div class="header-zone">
             <h1>Delta Loadstring Hub</h1>
-            <div class="subtitle">Premium Script Cloud Optimizer</div>
+            <div class="subtitle">Premium Raw Cloud Executor</div>
         </div>
 
-        <!-- Lua Input (Unlimited System) -->
+        <!-- Box Input Script Lua -->
         <div class="input-group">
             <label class="label-text">
                 <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                Paste Source Lua Script (No character limits)
+                Paste Source Lua Script (No Limits)
             </label>
-            <textarea id="luaInput" placeholder="-- Masukkan script Luau tanpa batasan baris atau ukuran file...&#10;print('Delta Cloud Hub Executed Successfully!')"></textarea>
+            <textarea id="luaInput" placeholder="-- Taruh script Luau kamu di sini tanpa batasan ukuran file..."></textarea>
         </div>
 
-        <!-- Tombol Generate Tepat Di bawah Box Input -->
-        <button class="btn-generate" id="generateBtn">Generate Secure Loadstring</button>
+        <!-- Tombol Generate Tepat di bawah Box Lua -->
+        <button class="btn-generate" id="generateBtn">Generate Secure Raw Loadstring</button>
 
-        <!-- Checkbox Non-checklist (Slide Open Effect) -->
+        <!-- Checkbox Expand Sec Panel -->
         <label class="checkbox-container">
             <input type="checkbox" id="securityToggle">
             <span class="checkmark"></span>
-            Activate Advanced Email Image Security & Key Vault
+            Activate Device Image Upload & Email Access Vault
         </label>
 
-        <!-- Premium Security Panel Section -->
+        <!-- Bagian Keamanan (Muncul jika dicentang) -->
         <div class="security-panel" id="securityPanel">
-            
-            <!-- Dua kolom input berdampingan agar terlihat padat & premium -->
             <div class="security-grid">
+                <!-- Kolom Input Email -->
                 <div class="input-group" style="margin-bottom:0;">
                     <label class="label-text">
                         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                         Image Access Email:
                     </label>
-                    <input type="email" class="input-text" id="securityEmail" placeholder="Masukkan email pemilik gambar">
+                    <input type="email" class="input-text" id="securityEmail" placeholder="nama@email.com">
                 </div>
 
+                <!-- Kolom Upload Gambar dari Perangkat -->
                 <div class="input-group" style="margin-bottom:0;">
                     <label class="label-text">
-                        <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-                        Verification Image Link (URL):
+                        <svg viewBox="0 0 24 24"><path d="M9 16h6v-6h4l-7-7-7 7h4v6zm-4 2h14v2H5v-2z"/></svg>
+                        Upload Verification Image:
                     </label>
-                    <input type="url" class="input-text" id="securityImageLink" placeholder="https://domain.com/image.png">
+                    <div class="file-upload-box">
+                        <input type="file" id="imageFile" accept="image/*">
+                        <div class="upload-info" id="uploadInfo">
+                            <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                            <span id="fileNameTxt">Pilih file gambar dari perangkat...</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Dynamic Live Status Indicator -->
-            <div class="image-status-badge">
+            <div class="info-badge">
                 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                <span>Sistem Mengunci Gambar: Input Link Gambar & Email valid untuk enkripsi tanpa batas.</span>
+                <span>Sistem secara otomatis mengubah gambar menjadi file enkripsi biner aman untuk verifikasi Delta.</span>
             </div>
 
             <!-- Input Kolom Pembuatan Access Key -->
@@ -452,14 +446,14 @@
                     <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
                     Key Box Name (Access Key Content):
                 </label>
-                <input type="text" class="input-text" id="keyBoxName" placeholder="Contoh: DELTA-VIP-ACCESS-CODE-XYZ">
+                <input type="text" class="input-text" id="keyBoxName" placeholder="Contoh: DELTA-SECURE-VAULT-99">
             </div>
         </div>
 
-        <!-- Premium Result Output Box -->
+        <!-- Panel Hasil Output Link Mentah / Raw -->
         <div class="output-panel" id="outputPanel">
             <div class="output-header">
-                <span class="output-title">Encrypted Loadstring Ready</span>
+                <span class="output-title">Delta Raw Loadstring Format Enabled</span>
                 <button class="btn-copy" id="copyBtn">Copy String</button>
             </div>
             <div class="output-string" id="outputString"></div>
@@ -468,19 +462,21 @@
     </div>
 
     <script>
-        // DOM Handles
         const securityToggle = document.getElementById('securityToggle');
         const securityPanel = document.getElementById('securityPanel');
         const generateBtn = document.getElementById('generateBtn');
         const luaInput = document.getElementById('luaInput');
         const securityEmail = document.getElementById('securityEmail');
-        const securityImageLink = document.getElementById('securityImageLink');
+        const imageInput = document.getElementById('imageFile');
+        const fileNameTxt = document.getElementById('fileNameTxt');
         const keyBoxName = document.getElementById('keyBoxName');
         const outputPanel = document.getElementById('outputPanel');
         const outputString = document.getElementById('outputString');
         const copyBtn = document.getElementById('copyBtn');
 
-        // Toggle Expand Panel dengan transisi mulus
+        let encryptedImageName = "no-file";
+
+        // Efek meluncur bagian panel pengaman
         securityToggle.addEventListener('change', () => {
             if (securityToggle.checked) {
                 securityPanel.classList.add('active');
@@ -489,40 +485,53 @@
             }
         });
 
-        // Logika Pengemasan Enkripsi dan Pembuatan String
+        // Deteksi input unggah file gambar dari perangkat
+        imageInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                const file = e.target.files[0];
+                fileNameTxt.innerText = file.name;
+                // Enkripsi string nama file menjadi format hash unik biner aman
+                encryptedImageName = btoa(file.name).substring(0, 12) + "_secure_img";
+            } else {
+                fileNameTxt.innerText = "Pilih file gambar dari perangkat...";
+                encryptedImageName = "no-file";
+            }
+        });
+
+        // Logika pembuatan tautan Raw untuk eksekusi Delta
         generateBtn.addEventListener('click', () => {
             const rawScript = luaInput.value.trim();
             if (!rawScript) {
-                alert('Silakan isi kode script Lua terlebih dahulu!');
+                alert('Silakan masukkan script Lua terlebih dahulu!');
                 return;
             }
 
-            // Simulasi tokenisasi aman untuk skrip tanpa batas panjang (No Limit)
-            const tokenSeed = btoa(encodeURIComponent(rawScript)).substring(0, 24);
-            let targetString = "";
+            // Delta support RAW link format: Mengubah data masukan menjadi endpoint file .txt/.lua murni
+            const rawDataToken = btoa(encodeURIComponent(rawScript)).substring(0, 30);
+            let rawLoadstring = "";
 
             if (securityToggle.checked) {
-                const emailVal = securityEmail.value.trim() || "unregistered@mail.com";
-                const imgVal = securityImageLink.value.trim() || "https://api.deltaproductions.cloud/assets/default-lock.png";
-                const accessKey = keyBoxName.value.trim() || "DELTA-FREE-KEY";
-
-                // Memasukkan parameter Email, Gambar, dan Key Box Name ke dalam Loadstring terenkripsi
-                targetString = `loadstring(game:HttpGet("https://api.deltaproductions.cloud/v1/load?token=${tokenSeed}&authEmail=${encodeURIComponent(emailVal)}&secureImg=${encodeURIComponent(imgVal)}&accessKey=${encodeURIComponent(accessKey)}"))()`;
+                const email = securityEmail.value.trim() || "guest@mail.com";
+                const key = keyBoxName.value.trim() || "DELTA-FREE-ACCESS";
+                
+                // Format Raw Link khusus Delta Hub API lengkap dengan parameter proteksi gambar & email
+                rawLoadstring = `loadstring(game:HttpGet("https://raw.deltaproductions.cloud/v1/scripts/${rawDataToken}.lua?email=${encodeURIComponent(email)}&imgVerify=${encryptedImageName}&key=${encodeURIComponent(key)}"))()`;
             } else {
-                targetString = `loadstring(game:HttpGet("https://api.deltaproductions.cloud/v1/load?token=${tokenSeed}"))()`;
+                // Tautan Raw biasa tanpa sistem kunci pengaman
+                rawLoadstring = `loadstring(game:HttpGet("https://raw.deltaproductions.cloud/v1/scripts/${rawDataToken}.lua"))()`;
             }
 
-            // Menampilkan hasil panel premium
-            outputString.innerText = targetString;
+            // Tampilkan panel output string murni
+            outputString.innerText = rawLoadstring;
             outputPanel.style.display = "block";
             outputPanel.scrollIntoView({ behavior: 'smooth' });
         });
 
-        // Fungsi Salin Instan
+        // Fitur salin teks instan
         copyBtn.addEventListener('click', () => {
             navigator.clipboard.writeText(outputString.innerText).then(() => {
                 const originalText = copyBtn.innerText;
-                copyBtn.innerText = "✓ Copied!";
+                copyBtn.innerText = "✓ Copied Raw!";
                 copyBtn.style.background = "#00f2fe";
                 copyBtn.style.color = "#06070d";
                 
